@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Quantum Cockpit v9 - Dynamic Links</title>
+  <title>Quantum Cockpit v9 - Founders</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -93,7 +93,7 @@
 
   <script>
     // Endpoint to fetch dynamic URL config from your backend UI Agent
-    const URL_CONFIG_API = 'https://your-backend-api/ui/url-config';
+    const URL_CONFIG_API = 'https://your-sovereign-domain.com/api/ui/url-config';
 
     async function fetchAndApplyUrls() {
       try {
@@ -124,6 +124,7 @@
           if (btn && urls[urlKey]) {
             btn.textContent = urls[urlKey].label || urlKey;
             btn.onclick = () => window.open(urls[urlKey].url, '_blank');
+            btn.disabled = false;
           } else if (btn) {
             btn.textContent = 'Unavailable';
             btn.disabled = true;
@@ -143,4 +144,3 @@
   </script>
 </body>
 </html>
-
