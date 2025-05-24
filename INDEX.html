@@ -1,107 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Quantum Cockpit v8 – Founder Sovereign Deck</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quantum Cockpit v9 - Dynamic Links</title>
   <style>
     body {
-      background-color: #000;
-      color: #00ffe1;
-      font-family: 'Segoe UI', sans-serif;
-      padding: 2rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #101025;
+      color: #e0e0f0;
+      margin: 0;
+      padding: 1rem;
+    }
+    header {
+      background-color: #202040;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
       text-align: center;
     }
     h1 {
-      font-size: 2.5rem;
+      color: #88aaff;
+      margin: 0;
     }
-    .section-title {
-      margin-top: 3rem;
-      font-size: 1.6rem;
-      color: #44ffff;
-      border-bottom: 1px solid #00ffe1;
-      padding-bottom: 0.25rem;
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
+    section {
+      background-color: #202040;
+      border-radius: 8px;
+      padding: 1rem;
+      flex: 1 1 320px;
+      max-width: 400px;
+      box-sizing: border-box;
     }
-    .tile {
-      background-color: #111;
-      border: 1px solid #00ffe1;
-      border-radius: 10px;
-      padding: 1.25rem;
+    button {
+      width: 100%;
+      background-color: #3355ff;
+      border: none;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border-radius: 6px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
-    .tile:hover {
-      background-color: #1a1a1a;
-      transform: scale(1.02);
-    }
-    a {
-      color: #00ffe1;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .radio {
-      margin-top: 1rem;
+    button:hover {
+      background-color: #5577ff;
     }
   </style>
 </head>
 <body>
-  <h1>Quantum Cockpit v8</h1>
-  <p>Unified Founder Control Panel – Full Sovereign Deck</p>
+  <header>
+    <h1>Quantum Cockpit v9 - Founders</h1>
+  </header>
 
-  <div class="radio">
-    <label><input type="checkbox" id="radioToggle" onchange="toggleRadio()"> Vault Frequency: Founder Radio</label>
-    <audio id="radioPlayer" src="https://quantumnexus.io/cloud/audio/intro.wav" loop></audio>
-  </div>
+  <main>
+    <section>
+      <h2>Launch</h2>
+      <button id="btnWeb3Quest">Loading...</button>
+      <button id="btnVaultGateway">Loading...</button>
+      <button id="btnWHISPR">Loading...</button>
+    </section>
 
-  <div class="section-title">LAUNCH</div>
-  <div class="grid">
-    <div class="tile"><h3>Web3Quest</h3><a href="https://quantumnexus.io/cloud/web3quest/index.html" target="_blank" rel="noopener">Enter Game</a></div>
-    <div class="tile"><h3>Vault Gateway</h3><a href="https://quantumnexus.io/cloud/vault/index.html" target="_blank" rel="noopener">Access Scrolls</a></div>
-    <div class="tile"><h3>WHISPR AI Companion</h3><a href="https://quantumnexus.io/cloud/companion/whispr.html" target="_blank" rel="noopener">Activate AI</a></div>
-  </div>
+    <section>
+      <h2>Scrolls & Codex</h2>
+      <button id="btnCodexIndex">Loading...</button>
+      <button id="btnScrollLibrary">Loading...</button>
+      <button id="btnScrollUIAudit">Loading...</button>
+      <button id="btnAgentTaskLog">Loading...</button>
+    </section>
 
-  <div class="section-title">SCROLLS & CODEX</div>
-  <div class="grid">
-    <div class="tile"><h3>Codex Index</h3><a href="https://quantumnexus.io/cloud/codex/index.html" target="_blank" rel="noopener">Open Codex</a></div>
-    <div class="tile"><h3>Scroll Library</h3><a href="https://quantumnexus.io/cloud/scrolls/" target="_blank" rel="noopener">View All Scrolls</a></div>
-    <div class="tile"><h3>Scroll: UI Audit</h3><a href="https://quantumnexus.io/cloud/codex/Scroll_Quantum_UI_Check_Analysis.pdf" target="_blank" rel="noopener">Open Scroll</a></div>
-    <div class="tile"><h3>Agent Task Log</h3><a href="https://quantumnexus.io/cloud/codex/agent-tasks.html" target="_blank" rel="noopener">Review Tasks</a></div>
-  </div>
+    <section>
+      <h2>Tools</h2>
+      <button id="btnVaultToolsBundle">Loading...</button>
+      <button id="btnSkyvaultUploader">Loading...</button>
+      <button id="btnDecksValuations">Loading...</button>
+    </section>
 
-  <div class="section-title">TOOLS</div>
-  <div class="grid">
-    <div class="tile"><h3>Vault Tools Bundle</h3><a href="https://quantumnexus.io/cloud/tools/Quantum_Vault_Tools_Update_v1.zip" target="_blank" rel="noopener">Download ZIP</a></div>
-    <div class="tile"><h3>SKYVAULT Uploader</h3><a href="https://quantumnexus.io/cloud/tools/SKYVAULT_Uploader_Tool_v1.html" target="_blank" rel="noopener">Upload to Codex</a></div>
-    <div class="tile"><h3>Decks & Valuations</h3><a href="https://quantumnexus.io/cloud/valuation/deck-index.html" target="_blank" rel="noopener">View Decks</a></div>
-  </div>
-
-  <div class="section-title">REALMS & EXPANSION</div>
-  <div class="grid">
-    <div class="tile"><h3>Aethervale Gate</h3><a href="https://quantumnexus.io/cloud/realms/aethervale_gate.jpg" target="_blank" rel="noopener">Enter Realm</a></div>
-    <div class="tile"><h3>BigPi Search</h3><a href="https://quantumnexus.io/cloud/search/index.html" target="_blank" rel="noopener">Activate BigPi</a></div>
-    <div class="tile"><h3>Director’s Cut</h3><a href="https://quantumnexus.io/cloud/mp4/trailer.mp4" target="_blank" rel="noopener">Watch Trailer</a></div>
-    <div class="tile"><h3>Composer Theme</h3><a href="https://quantumnexus.io/cloud/audio/theme.wav" target="_blank" rel="noopener">Play Music</a></div>
-  </div>
+    <section>
+      <h2>Realms & Expansion</h2>
+      <button id="btnAethervaleGate">Loading...</button>
+      <button id="btnBigPiSearch">Loading...</button>
+      <button id="btnDirectorsCut">Loading...</button>
+      <button id="btnComposerTheme">Loading...</button>
+    </section>
+  </main>
 
   <script>
-    function toggleRadio() {
-      const audio = document.getElementById("radioPlayer");
-      if (document.getElementById("radioToggle").checked) {
-        audio.play();
-      } else {
-        audio.pause();
+    // Endpoint to fetch dynamic URL config from your backend UI Agent
+    const URL_CONFIG_API = 'https://your-backend-api/ui/url-config';
+
+    async function fetchAndApplyUrls() {
+      try {
+        const response = await fetch(URL_CONFIG_API);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const urls = await response.json();
+
+        // Map of button IDs to config keys
+        const btnMap = {
+          btnWeb3Quest: 'web3quest',
+          btnVaultGateway: 'vaultGateway',
+          btnWHISPR: 'whisprAI',
+          btnCodexIndex: 'codexIndex',
+          btnScrollLibrary: 'scrollLibrary',
+          btnScrollUIAudit: 'scrollUIAudit',
+          btnAgentTaskLog: 'agentTaskLog',
+          btnVaultToolsBundle: 'vaultToolsBundle',
+          btnSkyvaultUploader: 'skyvaultUploader',
+          btnDecksValuations: 'decksValuations',
+          btnAethervaleGate: 'aethervaleGate',
+          btnBigPiSearch: 'bigPiSearch',
+          btnDirectorsCut: 'directorsCut',
+          btnComposerTheme: 'composerTheme'
+        };
+
+        for (const [btnId, urlKey] of Object.entries(btnMap)) {
+          const btn = document.getElementById(btnId);
+          if (btn && urls[urlKey]) {
+            btn.textContent = urls[urlKey].label || urlKey;
+            btn.onclick = () => window.open(urls[urlKey].url, '_blank');
+          } else if (btn) {
+            btn.textContent = 'Unavailable';
+            btn.disabled = true;
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching URL config:', error);
+        // Set all buttons to error state
+        document.querySelectorAll('button').forEach(btn => {
+          btn.textContent = 'Error loading';
+          btn.disabled = true;
+        });
       }
     }
-  </script>
 
-  <footer style="margin-top: 2rem; color: #555;">
-    Quantum Nexus Technologies Ltd – vault@quantumnexusio.com
-  </footer>
+    window.onload = fetchAndApplyUrls;
+  </script>
 </body>
 </html>
+
